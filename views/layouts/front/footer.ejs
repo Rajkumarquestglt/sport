@@ -913,10 +913,12 @@
 </div>
 
 <link href="/javascripts/wallet.js" rel="stylesheet">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 <script>
   
 async function metamaskPopup(){
-    finalprice = "0.0001";
+    finalprice = "0.01";
     user_accounts = await getAccount();
     ethereum.request({
         method: 'eth_sendTransaction',
@@ -927,39 +929,33 @@ async function metamaskPopup(){
             chainId: '0x1' //gasPrice: '0x09184e72a000',
             //gas: '21000',
         }, ],
-    })
+      })
 
     .then((txHash) => {
         console.log(txHash);
-        // var obj = document.getElementById('tx_id1');
-        // // obj.value = txHash;
-        // $.ajax({
-        //     dataType: "json",
-        //     type: 'GET',
-        //     url: '/store-hash',
-        //     data: {
-        //         tx_id: txHash,
-        //         art_id: art_id,
-        //         address: user_accounts,
-        //         qty: document.getElementById("copies").value,
-        //         amount: finalprice,
-        //         currency: currency,
-        //         currencyRate: currencyRate
-        //     },
-        //     success: function(data) {
-        //         swal({
-        //             type: 'success',
-        //             text: 'Transaction completed successfully.',
-        //             timer: 3000,
-        //             onOpen: function() {
-        //                 swal.showLoading()
-        //             }
-        //         }).then(function() {
-        //             location.reload();
-        //         });
-        //         //               location.reload();
-        //     }
-        // });
+         // obj.value = txHash;
+           $.ajax({
+              dataType: "json",
+              type: 'GET',
+             url: '/users/buy-team',
+             data: {
+                 tx_id: txHash,
+                 address: user_accounts,
+             },
+             success: function(data) { console.log(data)
+                 swal({
+                     type: 'success',
+                     text: 'Transaction completed successfully.',
+                    timer: 3000,
+                    onOpen: function() {
+                        swal.showLoading()
+                    }
+                }).then(function() {
+                    location.reload();
+                });
+                              location.reload();
+            }
+        });
     });
 }
 

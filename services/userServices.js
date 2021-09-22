@@ -42,7 +42,7 @@ const findUserByWallet=async(wallet)=>{
 
       try{
           let user =await UserInfo.find({'wallet_address':wallet});
-
+          return user;
       }catch(err){
           console.log(err);
       }

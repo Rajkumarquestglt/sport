@@ -6,10 +6,8 @@ const bcrypt = require('bcryptjs');
 
 const TeamSchema=new mongoose.Schema({
 
-    user_id:{
-        type:String,
-        default:null,
-    },
+    user_id:[{ type: mongoose.Schema.Types.ObjectId, ref: 'users' }],
+    
     team_no:{
         type:String,
         default:null,
@@ -24,8 +22,7 @@ const TeamSchema=new mongoose.Schema({
     }
 })
 
-var TeamInfo=mongoose.Schema('teams',TeamSchema);
+var TeamInfo =  mongoose.model('teams',TeamSchema);
 
 module.exports = {TeamInfo:TeamInfo};
-
 

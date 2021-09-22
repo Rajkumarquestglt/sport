@@ -1,6 +1,6 @@
 
 const userServices=require('../../services/userServices');
-
+const teamServices=require('../../services/teamServices');
 const index=async(req,res)=>{
     let users=await userServices.fetchUsers();
 }
@@ -35,6 +35,12 @@ const login=async(req,res)=>{
           res.send(user);
       }
            
+}
+
+const buyTeam=async(req,res)=>{
+    let address=req.query.address;
+    let team=await teamServices(address);
+    res.send(team);
 }
 
 module.exports={
