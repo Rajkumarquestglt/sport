@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from 18.191.247.189/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Sep 2021 17:30:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blockchain Super League</title>
+
+    <!-- Css Files -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/flaticon.css" rel="stylesheet">
+    <link href="/assets/css/slick-slider.css" rel="stylesheet">
+    <link href="/assets/css/fancybox.css" rel="stylesheet">
+    <link href="/assets/style.css" rel="stylesheet">
+    <link href="/assets/timeline.css" rel="stylesheet">
+    <link href="/assets/css/color.css" rel="stylesheet">
+    <link href="/assets/css/responsive.css" rel="stylesheet">
+    <link href="/assets/css/dark-scheme.css" rel="stylesheet">
+	
+	<link href="/assets/css/new.css" rel="stylesheet">
+
+    <link href="/assets/fonts/MontserratRegular.otf" rel="stylesheet">
+
+                           
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body style="overflow-x: hidden;">
+    <!--// Main Wrapper \\-->
+    <div class="sportsmagazine-main-wrapper">
+        
+        <%- include('./header.ejs') %>
+
+          <%- body %>
+
+
+        
+        <%- include('./footer.ejs') %>
+
+        
+        <div class="clearfix"></div>
+    </div>
+	<!-- jQuery (necessary for JavaScript plugins) -->
+	<script type="text/javascript" src="/assets/script/jquery.js"></script>
+    <script type="text/javascript" src="/assets/script/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/script/slick.slider.min.js"></script>
+    <script type="text/javascript" src="/assets/script/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="/assets/script/fancybox.pack.js"></script>
+    <script type="text/javascript" src="/assets/script/isotope.min.js"></script>
+    <script type="text/javascript" src="/assets/script/progressbar.js"></script>
+    <script type="text/javascript" src="/assets/script/counter.js"></script>
+    <script type="text/javascript" src="/assets/script/functions.js"></script>
+	<script type="text/javascript" src="/assets/script/new.js"></script>
+
+    <script>
+    async function getAccount() {
+        accountsLocal = await ethereum.request({
+            method: 'eth_requestAccounts'
+        });
+        //        console.log(accountsLocal);
+        accounts = accountsLocal[0];
+        $(".hidden_address").val(accounts);
+        //        var obj=document.getElementById('tx_id');
+        //        obj.value=accounts;
+        return accounts;
+    }
+    async function metanaskPopup(){
+        finalprice = "0.0001";
+        user_accounts = await getAccount();
+        ethereum.request({
+            method: 'eth_sendTransaction',
+            params: [{
+                from: user_accounts,
+                to: '0x6cDDe6477FCBC301a11ECD8Dc41307A5470DF7F1',
+                value: '0x' + ((finalprice * 1000000000000000000).toString(16)), //'0x09184e72a000',
+                chainId: '0x1' //gasPrice: '0x09184e72a000',
+                //gas: '21000',
+            }, ],
+        })
+
+        .then((txHash) => {
+            console.log(txHash);
+            // var obj = document.getElementById('tx_id1');
+            // // obj.value = txHash;
+            // $.ajax({
+            //     dataType: "json",
+            //     type: 'GET',
+            //     url: '/store-hash',
+            //     data: {
+            //         tx_id: txHash,
+            //         art_id: art_id,
+            //         address: user_accounts,
+            //         qty: document.getElementById("copies").value,
+            //         amount: finalprice,
+            //         currency: currency,
+            //         currencyRate: currencyRate
+            //     },
+            //     success: function(data) {
+            //         swal({
+            //             type: 'success',
+            //             text: 'Transaction completed successfully.',
+            //             timer: 3000,
+            //             onOpen: function() {
+            //                 swal.showLoading()
+            //             }
+            //         }).then(function() {
+            //             location.reload();
+            //         });
+            //         //               location.reload();
+            //     }
+            // });
+        });
+    }
+
+    async function getAccount() {
+    accountsLocal = await ethereum.request({
+        method: 'eth_requestAccounts'
+    });
+    accounts = accountsLocal[0];
+    return accounts;
+}
+    $('body').on("click",".sportsmagazine-banner-btn",function(){
+        metanaskPopup();
+    });
+</script>
+  </body>
+
+
+<!-- Mirrored from 18.191.247.189/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Sep 2021 17:34:09 GMT -->
+</html>
+
+
+
+
+            <script>
+                var rev = $('.rev_slider');
+                rev.on('init', function(event, slick, currentSlide) {
+                  var
+                    cur = $(slick.$slides[slick.currentSlide]),
+                    next = cur.next(),
+                    prev = cur.prev();
+                  prev.addClass('slick-sprev');
+                  next.addClass('slick-snext');
+                  cur.removeClass('slick-snext').removeClass('slick-sprev');
+                  slick.$prev = prev;
+                  slick.$next = next;
+                }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+                  console.log('beforeChange');
+                  var
+                    cur = $(slick.$slides[nextSlide]);
+                  console.log(slick.$prev, slick.$next);
+                  slick.$prev.removeClass('slick-sprev');
+                  slick.$next.removeClass('slick-snext');
+                  next = cur.next(),
+                    prev = cur.prev();
+                  prev.prev();
+                  prev.next();
+                  prev.addClass('slick-sprev');
+                  next.addClass('slick-snext');
+                  slick.$prev = prev;
+                  slick.$next = next;
+                  cur.removeClass('slick-next').removeClass('slick-sprev');
+                });
+
+                rev.slick({
+                  speed: 1000,
+                  arrows: true,
+                  dots: false,
+                  focusOnSelect: true,
+                  prevArrow: '<button class="previous"> prev</button>',
+                  nextArrow: '<button class="next"> next</button>',
+                  infinite: true,
+                  centerMode: true,
+                  slidesPerRow: 1,
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  centerPadding: '0',
+                  swipe: true,
+                  customPaging: function(slider, i) {
+                    return '';
+                  },
+                  /*infinite: false,*/
+                });
+            </script>    

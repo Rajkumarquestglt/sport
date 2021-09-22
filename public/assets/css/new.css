@@ -1,0 +1,1088 @@
+@font-face {
+  font-family: MontserratRegular;
+  src: url('../fonts/MontserratRegular.otf');
+}
+
+@font-face {
+  font-family: SquareBold;
+  src: url('../fonts/SquareBold.ttf');
+}
+
+@font-face {
+  font-family: SquareRoman;
+  src: url('../fonts/SquareRoman.ttf');
+}
+
+
+
+
+
+
+
+
+body{
+	background-color: #11224d !important;
+}
+
+
+
+.logo-s{
+	display: none;
+}
+
+
+.logo-l{
+	display: block;
+}
+
+
+.sportsmagazine-section-post-text p {
+	font-weight: normal !important;
+}
+
+.main-heading{
+	font-weight: normal !important;
+}
+
+.link-orange{
+	color:#ff9000 !important;
+}
+.link-orange a:hover{
+	color:#ff9000 !important;
+}
+
+.prize-pool-btn-placing{
+    position: absolute;
+    bottom: -85px;
+     margin-top: 50px;clear: both;
+}
+
+.bordered-container{
+  border-left: 1px solid #192540;
+  width: 100% !important;
+  border-bottom: 1px solid #192540;
+}
+table.tableizer-table {
+margin: 0px;
+    font-size: 12px;
+    border: 0px solid #CCC; 
+    font-family: Arial, Helvetica, sans-serif;
+    width:100%;
+  } 
+  .tableizer-table td {
+    padding: 2px;
+    margin: 0px;
+    border: 0px;
+  }
+  .tableizer-table th {
+    color: #FFF;
+    font-weight: bold;
+    text-align:left;
+    padding:4px;
+    background: #192540;
+    font-size:16px;
+    border-right: 1px solid #192540;
+  border-left: 1px solid #192540;
+  border-top: 1px solid #192540;
+  }
+
+.tableizer-table tr td:first-child
+{
+  background:#fff;
+  font-weight:bold;
+  text-align:right;
+  font-size:14px;
+  width:30%;
+  color:#000;
+  padding-right:4px;
+  
+}
+
+.tableizer-table tr td:nth-child(2)
+{
+  background:#ff8e00;
+  font-weight:bold;
+  color:#fff;
+  text-align:center;
+  font-size:14px;
+  border-right: 1px solid #394965 !important;
+}
+
+.tableizer-table tr:first-child td {
+    color: #FFF;
+    font-weight: bold;
+    text-align:left;
+    padding:4px;
+    background: #394965;
+    font-size:14px;
+  border-left: 1px solid #394965;
+  }
+
+.bordered-container .col-md-4{
+  padding:0px !important;
+  margin: 0px !important;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+.player-modal .modal-dialog {
+    margin: 10% 7%;
+}
+.player-modal .modal-body li {
+    width: 100px;
+    height: 100px;
+}
+
+.sportsmagazine-main-header{
+	height: 80px !important;
+}
+
+.logo-l{
+	display: none;
+}
+
+
+.logo-s{
+	display: block;
+	top: -15px;
+position: relative;
+}
+
+.sportsmagazine-header-two{
+	position: fixed !important;
+}
+
+#navbar-collapse-1{
+top: 65px !important;
+position: fixed !important;	
+margin: 0px 0px 0px 0px !important;
+box-shadow: 0px 0px 0px 0px rgba(0,0,0,0) !important;
+}
+
+.sportsmagazine-header-two .navbar-nav > li {
+margin: 0px !important;
+padding: 0px !important;
+}
+
+.sportsmagazine-header-two .navbar-nav > li a {
+    text-align: center;
+    padding: 12px 15px;
+}
+
+.navbar-toggle{
+background-color: #1a2944 !important;
+padding: 20px!important;
+margin-right: -15px!important;
+margin-top: 10px!important;
+border-color: #1a2944 !important;
+position: fixed;
+right: 20px;
+}
+.icon-bar{
+	background-color: #ff9000!important;
+}
+
+.social-box h2{
+	font-size:28px !important;
+}
+
+.logo-place {
+    width: auto !important;
+    height: 75px;
+    top: 15px !important;
+}
+.logo-place img{
+
+
+}
+.sportsmagazine-logo-two {
+    margin: 0px 0 0px !important;
+}
+
+.navbar-nav {
+	background-color: #1a2944 !important;
+}
+
+
+.sportsmagazine-main-header{
+	background-color: #1a2944 !important;
+}
+
+body{
+	font-family: MontserratRegular !important;
+}
+
+.navbar-nav > li a {
+font-family: 'SquareBold', sans-serif !important;
+font-size: 16px !important;
+font-weight: 500 !important;
+letter-spacing: 0 !important;
+}
+
+h5{
+	font-family: SquareBold !important;
+	margin-bottom: 0px !important;
+	font-size:14px !important;
+	
+}
+
+h3{
+	text-align: left !important;
+	font-size: 30px !important;
+}
+
+.sportsmagazine-main-section.small-new-gallery {
+    background-image: url(../images/new/main-header.jpg);
+    background-position: center;
+    background-size: cover;
+	margin-top: 10px;
+}
+
+.header-badges{
+	position: absolute;
+	right: 0px;
+	bottom:0px;
+	display:none;
+}
+
+.header-badges-small{
+	position: absolute;
+	bottom:0px;
+	display:block;
+	left: 0;
+right: 0;
+margin-right: auto;
+margin-left: auto;
+}
+
+.img-box{
+	display:none;
+}
+
+.navbar-nav{
+	float: right !important;
+}
+
+.navfix{
+	padding-right: 0px !important;
+}
+
+.header-last-p{
+	
+padding-bottom: 100px;
+
+}
+
+.mint-outer-sec{
+	background-image: url(../images/new/man-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 0;
+    background-color: #3a3a3a;
+}
+
+.why-choose-sec{
+	background-image: url(../images/new/main-header.jpg);
+    background-position: center;
+    background-size: cover;
+	
+}
+
+.why-choose-box h2 img {
+    height: 60px !important;
+}
+
+.why-choose-box {
+    padding: 30px 15px 10px !important;
+    background-color: #101f43 !important;
+    margin-bottom: 5px;
+}
+
+
+.why-choose-box h5 {
+    color: #f98125;
+    font-size: 18px;
+	text-transform: uppercase;
+	text-align:center;
+}
+
+.why-choose-box p {
+    line-height: 26px !important;
+    margin-top: 10px;
+    min-height: 90px;
+}
+
+
+.man-feet{
+	position: absolute;
+right: 0px;
+max-height: 120%;
+}
+
+.battle-height{
+	padding-top: 0px;
+padding-bottom: 120px;
+	background-image: url(../images/new/battle-bg.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.take-a-look{
+	margin-top:40px;
+	margin-bottom:40px;
+}
+
+.main-heading{
+	line-height:1.2;
+	margin-bottom:20px;
+}
+
+.ltbc{
+	padding-top:20px;
+}
+.roadmap-sec {
+		background-image: url(../images/new/roadmap-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.faq-new-sec {
+		background-image: url(../images/new/main-header.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.sportsmagazine-accordion .panel-heading .panel-title > a{
+	background-color: #05112e !important;
+}
+
+.stay-in-loop {
+		background-image: url(../images/new/crowd-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.connect-wallet:hover{
+	color:#000 !important;
+}
+
+#navbar-collapse-1{
+	background-color: #1a2944 !important
+}
+
+.panel-title  a{
+	font-family: 'MontserratRegular', sans-serif !important;
+}
+
+
+.connect-wallet-wrap{
+	padding-top:8px !important;
+}
+.sportsmagazine-sticky .sportsmagazine-logo-two, .sportsmagazine-sticky .header-info {
+    margin: 0 !important;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 769px)  and (max-width: 991px) {
+
+.sportsmagazine-main-header{
+	height: 80px !important;
+}
+
+.sportsmagazine-header-two{
+	position: fixed !important;
+}
+
+#navbar-collapse-1{
+top: 65px !important;
+position: fixed !important;	
+margin: 0px 0px 0px 0px !important;
+box-shadow: 0px 0px 0px 0px rgba(0,0,0,0) !important;
+}
+
+.sportsmagazine-header-two .navbar-nav > li {
+margin: 0px !important;
+padding: 0px !important;
+}
+
+.sportsmagazine-header-two .navbar-nav > li a {
+    text-align: center;
+    padding: 12px 15px;
+}
+
+.navbar-toggle{
+background-color: #1a2944 !important;
+padding: 20px!important;
+margin-right: -15px!important;
+margin-top: 10px!important;
+border-color: #1a2944 !important;
+position: fixed;
+right: 20px;
+}
+.icon-bar{
+	background-color: #ff9000!important;
+}
+
+.social-box h2{
+	font-size:28px !important;
+}
+
+.logo-place {
+	width:250px !important;
+	height:150px;
+	top: -50px !important;
+}
+
+.logo-place img{
+
+
+}
+
+.navbar-nav {
+	background-color: #1a2944 !important;
+}
+
+
+.sportsmagazine-main-header{
+	background-color: #1a2944 !important;
+}
+
+body{
+	font-family: MontserratRegular !important;
+}
+
+.navbar-nav > li a {
+font-family: 'SquareBold', sans-serif !important;
+font-size: 16px !important;
+font-weight: 500 !important;
+letter-spacing: 0 !important;
+}
+
+h5{
+	font-family: SquareBold !important;
+	margin-bottom: 0px !important;
+	font-size:14px !important;
+	
+}
+
+h3{
+	text-align: left !important;
+	font-size: 30px !important;
+}
+
+.sportsmagazine-main-section.small-new-gallery {
+    background-image: url(../images/new/main-header.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.header-badges{
+	position: absolute;
+	right: 0px;
+	bottom:0px;
+	display:none;
+}
+
+.header-badges-small{
+	position: absolute;
+	bottom:0px;
+	display:block;
+	left: 0;
+right: 0;
+margin-right: auto;
+margin-left: auto;
+}
+
+.img-box{
+	display:none;
+}
+
+.navbar-nav{
+	float: right !important;
+}
+
+.navfix{
+	padding-right: 0px !important;
+}
+
+.header-last-p{
+	
+padding-bottom: 100px;
+
+}
+
+.mint-outer-sec{
+	background-image: url(../images/new/man-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 0;
+    background-color: #3a3a3a;
+}
+
+.why-choose-sec{
+	background-image: url(../images/new/main-header.jpg);
+    background-position: center;
+    background-size: cover;
+	
+}
+
+.why-choose-box h2 img {
+    height: 60px !important;
+}
+
+.why-choose-box{
+	padding: 30px 15px 10px !important;
+	background-color: #101f43 !important;
+}
+
+.why-choose-box h5 {
+    color: #f98125;
+    font-size: 18px;
+	text-transform: uppercase;
+	text-align:center;
+}
+
+.why-choose-box p {
+    line-height: 26px !important;
+    margin-top: 10px;
+}
+
+.man-feet{
+	position: absolute;
+right: 0px;
+max-height: 120%;
+}
+
+.battle-height{
+	padding-top: 0px;
+padding-bottom: 90px;
+	background-image: url(../images/new/battle-bg.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.take-a-look{
+	margin-top:40px;
+	margin-bottom:40px;
+}
+
+.main-heading{
+	line-height:1.2;
+	margin-bottom:20px;
+}
+
+.ltbc{
+	padding-top:20px;
+}
+.roadmap-sec {
+		background-image: url(../images/new/roadmap-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.faq-new-sec {
+		background-image: url(../images/new/main-header.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.sportsmagazine-accordion .panel-heading .panel-title > a{
+	background-color: #05112e !important;
+}
+
+.stay-in-loop {
+		background-image: url(../images/new/crowd-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.connect-wallet:hover{
+	color:#000 !important;
+}
+
+#navbar-collapse-1{
+	background-color: #1a2944 !important
+}
+
+.panel-title  a{
+	font-family: 'MontserratRegular', sans-serif !important;
+}
+
+
+.connect-wallet-wrap{
+	padding-top:8px !important;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 992px) and (max-width: 1999px) {
+	
+	
+.header-badges-small{
+	display:none;
+}
+	
+#navbar-collapse-1 {
+    top: 0px !important;
+    margin: 0px 0px 0px 0px !important;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0) !important;
+}
+
+.sportsmagazine-main-section.small-new-gallery {
+    margin-top: 52px !important;
+}
+
+
+.logo-place {
+    width: auto !important;
+    height: auto !important;
+    top: -15px !important;
+}
+
+.sportsmagazine-header-two .navbar-nav > li {
+    padding: 16px 10px !important;
+}
+.social-box h2{
+	font-size:28px !important;
+}
+
+.logo-place img{
+	width:80%;
+	height:80%;
+}
+
+
+.navbar-nav {
+	background-color: #1a2944 !important;
+}
+
+
+.sportsmagazine-main-header{
+	background-color: #1a2944 !important;
+}
+
+body{
+	font-family: MontserratRegular !important;
+}
+
+.navbar-nav > li a {
+font-family: 'SquareBold', sans-serif !important;
+font-size: 11px !important;
+font-weight: 500 !important;
+letter-spacing: 0 !important;
+}
+
+h5{
+	font-family: SquareBold !important;
+	margin-bottom: 0px !important;
+	font-size:14px !important;
+	
+}
+
+h3{
+	text-align: left !important;
+	font-size: 30px !important;
+}
+
+.sportsmagazine-main-section.small-new-gallery {
+    background-image: url(../images/new/main-header.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.header-badges{
+	position: absolute;
+	right: 0px;
+	bottom:0px;
+}
+
+.navbar-nav{
+	float: right !important;
+}
+
+.navfix{
+	padding-right: 0px !important;
+}
+
+.header-last-p{
+	
+padding-bottom: 100px;
+
+}
+
+.mint-outer-sec{
+	background-image: url(../images/new/man-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 0;
+    background-color: #3a3a3a;
+}
+
+.why-choose-sec{
+	background-image: url(../images/new/main-header.jpg);
+    background-position: center;
+    background-size: cover;
+	
+}
+
+.why-choose-box h2 img {
+    height: 60px !important;
+}
+
+.why-choose-box{
+	padding: 30px 15px 10px !important;
+	background-color: #101f43 !important;
+}
+
+.why-choose-box h5 {
+    color: #f98125;
+    font-size: 18px;
+	text-transform: uppercase;
+	text-align:center;
+}
+
+.why-choose-box p {
+    line-height: 26px !important;
+    margin-top: 10px;
+     min-height: 175px;
+}
+.why-choose-sec.roadmap-sec .why-choose-box p {
+    min-height: 105px;
+}
+
+
+.man-feet{
+	position: absolute;
+right: 0px;
+max-height: 120%;
+}
+
+.battle-height {
+    padding-top: 0px;
+    padding-bottom: 120px;
+    background-image: url(../images/new/battle-bg.png);
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.take-a-look{
+	margin-top:40px;
+	margin-bottom:40px;
+}
+
+.main-heading{
+	line-height:1.2;
+	margin-bottom:20px;
+}
+
+.ltbc{
+	padding-top:20px;
+}
+.roadmap-sec {
+		background-image: url(../images/new/roadmap-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.faq-new-sec {
+		background-image: url(../images/new/main-header.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.sportsmagazine-accordion .panel-heading .panel-title > a{
+	background-color: #05112e !important;
+}
+
+.stay-in-loop {
+		background-image: url(../images/new/crowd-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.connect-wallet:hover{
+	color:#000 !important;
+}
+
+#navbar-collapse-1{
+	background-color: #1a2944 !important
+}
+
+.panel-title  a{
+	font-family: 'MontserratRegular', sans-serif !important;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1200px) {
+
+
+
+.navbar-nav {
+	background-color: #1a2944 !important;
+}
+
+
+.sportsmagazine-main-header{
+	background-color: #1a2944 !important;
+}
+
+body{
+	font-family: MontserratRegular !important;
+}
+
+.navbar-nav > li a {
+font-family: 'SquareBold', sans-serif !important;
+font-size: 14px !important;
+font-weight: 500 !important;
+letter-spacing: 0 !important;
+}
+
+h5{
+	font-family: SquareBold !important;
+	margin-bottom: 0px !important;
+}
+
+h3{
+	text-align: left !important;
+	font-size: 36px !important;
+}
+
+.sportsmagazine-main-section.small-new-gallery {
+    background-image: url(../images/new/main-header.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.header-badges{
+	position: absolute;
+	right: 0px;
+	bottom:0px;
+}
+
+.navbar-nav{
+	float: right !important;
+}
+
+.navfix{
+	padding-right: 0px !important;
+}
+
+.header-last-p{
+	
+padding-bottom: 100px;
+
+}
+
+.mint-outer-sec{
+	background-image: url(../images/new/man-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 0;
+    background-color: #3a3a3a;
+}
+
+.why-choose-sec{
+	background-image: url(../images/new/main-header.jpg);
+    background-position: center;
+    background-size: cover;
+	
+}
+
+.why-choose-box h2 img {
+    height: 60px !important;
+}
+
+.why-choose-box{
+	padding: 30px 15px 10px !important;
+	background-color: #101f43 !important;
+}
+
+.why-choose-box h5 {
+    color: #f98125;
+    font-size: 18px;
+	text-transform: uppercase;
+}
+.why-choose-box p {
+    min-height: 160px;
+}
+.why-choose-sec.roadmap-sec .why-choose-box p {
+    min-height: 100px;
+}
+
+.man-feet{
+	position: absolute;
+right: 0px;
+max-height: 140%;
+}
+.mint-outer-sec.battle-height{
+	position: relative;
+}
+.battle-height{
+	padding-top: 0px;
+padding-bottom: 120px;
+	background-image: url(../images/new/battle-bg.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.take-a-look{
+	margin-top:40px;
+	margin-bottom:40px;
+}
+
+.main-heading{
+	line-height:1.2;
+	margin-bottom:20px;
+}
+
+.ltbc{
+	padding-top:20px;
+}
+.roadmap-sec {
+		background-image: url(../images/new/roadmap-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.faq-new-sec {
+		background-image: url(../images/new/main-header.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.sportsmagazine-accordion .panel-heading .panel-title > a{
+	background-color: #05112e !important;
+}
+
+.stay-in-loop {
+		background-image: url(../images/new/crowd-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.connect-wallet:hover{
+	color:#000 !important;
+}
+
+#navbar-collapse-1{
+	background-color: #1a2944 !important
+}
+
+.panel-title  a{
+	font-family: 'MontserratRegular', sans-serif !important;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
