@@ -7,7 +7,11 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
+router.get('/wallet-balance', function(req, res, next) {
+  res.render('wallet-balance');
+});
 router.post('/login',AuthController.login);
 router.get('/buy-team',TeamController.buyTeam);
+router.get('/wallet',AuthController.getAvailableBalance);
 
 module.exports = router;
