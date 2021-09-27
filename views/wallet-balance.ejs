@@ -1,21 +1,38 @@
  <container>
      <row>
-         <div class="col-sm-12">
+         <div class="col-sm-6">
              <div class="card"style="width:500px;margin:auto;height:500px">
                  <div>
                      <div class="form-group">
                          <label>Enter Wallet Address</label>
-                         <input type="text"class="form-control"id="wallet_address"/>
+                         <input type="text"class="form-control"id="wallet_address"placeholder ="Enter Your Address"/>
                      </div>
                      <div class="form-group">
                         <button  onclick="checkBalance()" class="btn btn-primary"value="check now">Check Now</button>
                    </div>
-                     <div class="form-group">
-                          <p>balance:<span id="wallet-balance"></span></p>
+                     <div class="form-group"style="height:400px;">
+                          <p style="height:400px;overflow-y: auto">Tokens:<span id="wallet-balance"></span></p>
                      </div>
                     </div>
              </div>
          </div>
+
+         <div class="col-sm-6">
+            <div class="card"style="width:500px;margin:auto;height:500px">
+                <div>
+                    <div class="form-group">
+                        <label>Enter Token ID</label>
+                        <input type="text"class="form-control"id="wallet_token"placeholder ="Enter Token ID"/>
+                    </div>
+                    <div class="form-group">
+                       <button  onclick="checkToken()" class="btn btn-primary" value="check now">Check Now</button>
+                  </div>
+                    <div class="form-group">
+                         <p>Meta Data:<span id="token-data"></span></p>
+                    </div>
+                   </div>
+            </div>
+        </div>
      </row>
  </container>
 <script>
@@ -24,13 +41,38 @@
         $.ajax({type:"get",
                url:"/users/wallet",
               data:{wallet:address},
-               success:function(res){
-                   if(res){
-                       $("#wallet-balance").html(res);
+               success:function(res){ 
+                   if(res){ let data="";
+                      res.forEach((token,idex)=>{ console.log(token)
+                            data+="<br>"+token;
+                          $("#wallet-balance").html(data);
+                        
+                        //$("#wallet-balance").html("<br/>");
+
+                      })
                    }else
                     {
                         alert("wrong wallet address")
                     }
                }});
     }
+     
+    function checkToken(){
+        let address=$("#wallet_token").val();
+        $.ajax({type:"get",
+               url:"/users/token-data",
+              data:{wallet:address},
+               success:function(res){ 
+                   if(res){ 
+                          let metadata="<br>"+res;
+                          $("#token-data").html(metadata);
+                        
+                        //$("#wallet-balance").html("<br/>");
+                   }else
+                    {
+                        alert("wrong wallet address")
+                    }
+               }});
+    }
+
 </script>

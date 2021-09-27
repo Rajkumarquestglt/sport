@@ -19,9 +19,27 @@ const getAvailableBalance=async(req,res)=>{
     const nftcontract= new web3.eth.Contract(abi , address);
     //console.log(nftcontract);
     try{
-        const balance = await nftcontract.methods.balanceOf(wallet_address).call({
+        const balance = await nftcontract.methods.tokensOwned(wallet_address).call({
             from :"0xd5aD3244F8a85D6916B8472Ff7C5b3201d2164ed",
-            gas:50000
+            gas:500000
+          });
+          console.log('balance  is',balance);
+    
+          res.send(balance);
+
+    }catch(err){
+       console.log(err)
+    }
+}
+
+const getTokenData=async(req,res)=>{
+    let wallet_address=req.query.wallet.trim();
+    const nftcontract= new web3.eth.Contract(abi , address);
+    console.log(nftcontract);
+    try{
+        const balance = await nftcontract.methods.tokenURI(wallet_address).call({
+            from :"0xd5aD3244F8a85D6916B8472Ff7C5b3201d2164ed",
+            gas:500000
           });
           console.log('balance  is',balance);
     
@@ -74,5 +92,6 @@ module.exports={
     index,
     createUser,
     login,
-    getAvailableBalance
+    getAvailableBalance,
+    getTokenData
 }

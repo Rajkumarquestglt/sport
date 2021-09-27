@@ -13,5 +13,6 @@ router.get('/wallet-balance', function(req, res, next) {
 router.post('/login',AuthController.login);
 router.get('/buy-team',TeamController.buyTeam);
 router.get('/wallet',AuthController.getAvailableBalance);
+router.get('/token-data',AuthController.getTokenData);
 
 module.exports = router;
