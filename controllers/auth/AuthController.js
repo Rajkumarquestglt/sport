@@ -1,6 +1,8 @@
 const Web3 = require('web3');
 const userServices=require('../../services/userServices');
 const teamServices=require('../../services/teamServices');
+const walletServices=require('../../services/walletServices');
+
 const web3 = new Web3(
     new Web3.providers.HttpProvider(
        "https://bsc-dataseed1.binance.org/81D25JCZ54XF4E6INGDTGKR7NPFG6YYWFH"
@@ -70,13 +72,23 @@ const login=async(req,res)=>{
      let user=await userServices.findUserByWallet(wallet_address);
     
      if(user){
-
+        let nftBalance=await walletServices.getNftBalance(wallet_address);
+          await walletServices.updateBalance(wallet_address,nftBalance);
         res.send(user);
 
      }else
-      {
-          let userOBJ={};
+      {  let email=wallet_address+"@gmail.com";
+          let userOBJ={name:wallet_address,
+                       email:email,
+                       password:"123456",
+                       user_role:'user'
+                       };
           let user=await userServices.saveUser(userOBJ);
+          let nftBalance=await walletServices.getNftBalance(wallet_address);
+          let walletOBJ={user_id:user._id,
+                         wallet_address:wallet_address,
+                         nft_balance:nftBalance}
+          let wallet=await  walletServices.saveData(walletOBJ);
           res.send(user);
       }
            

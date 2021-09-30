@@ -42,7 +42,7 @@
                url:"/users/wallet",
               data:{wallet:address},
                success:function(res){ 
-                   if(res){ let data="";
+                   if(res.length>0){ let data="";
                       res.forEach((token,idex)=>{ console.log(token)
                             data+="<br>"+token;
                           $("#wallet-balance").html(data);
@@ -52,7 +52,8 @@
                       })
                    }else
                     {
-                        alert("wrong wallet address")
+                        $("#wallet-balance").html("Not Found");
+
                     }
                }});
     }
