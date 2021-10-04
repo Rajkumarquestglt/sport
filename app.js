@@ -28,10 +28,13 @@ app.use(cors({
   credentials: true
 }));
 
-
-mongoose.connect('mongodb://localhost:27017/sport', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://data123:data123@cluster0.exouw.mongodb.net/sports?retryWrites=true&w=majority')
     .then(() => console.log('MongoDB Database Connected'))
     .catch(err => console.log(err)) 
+/*
+mongoose.connect('mongodb://localhost:27017/sport', { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('MongoDB Database Connected'))
+    .catch(err => console.log(err)) */
 
 
 
