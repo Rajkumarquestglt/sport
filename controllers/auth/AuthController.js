@@ -49,7 +49,7 @@ const getCryptoPunk=async(req,res)=>{
           });
           console.log('balance  is',balance);
           
-          await walletServices.updateBalance(user.wallet_address,balance);
+          await walletServices.updateBalance(user._id,user.wallet_address,balance);
           
            //res.send(balance);
 

@@ -70,10 +70,19 @@ const findByWalletAddress=async(address)=>{
         console.log(err);
     }
 }
-const updateBalance=async(address,balance)=>{
+const updateBalance=async(user,address,balance)=>{
     try{
-        await WalletInfo.updateOne({'wallet_address':address},{$set:{nft_balance:balance}});
-
+        let wallet=await WalletInfo.find({'wallet_address':address});
+        if(wallet.length>0){
+            let info= await WalletInfo.updateOne({'wallet_address':address},{$set:{nft_balance:balance}});
+            console.log(info)
+         }else{
+            let wallet={user_id:user,wallet_address:address,nft_balance:balance};
+            let walletObj=new WalletInfo(wallet);
+            await walletObj.save();
+            console.log(walletObj);
+        }
+        
     }catch(err){
         console.log(err);
     }
