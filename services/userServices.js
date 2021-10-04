@@ -48,9 +48,18 @@ const findUserByWallet=async(wallet)=>{
       }
 }
 
+const users=async()=>{
+   try{
+       return await  UserInfo.find({});
+   }catch(e){
+     console.log(e);
+   }
+}
+
 module.exports={
     fetchUsers,
     saveUser,
     findUser,
-    findUserByWallet
+    findUserByWallet,
+    users
 }

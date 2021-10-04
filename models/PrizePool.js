@@ -6,7 +6,6 @@ const bcrypt = require('bcryptjs');
 
 const PrizePoolSchema=new mongoose.Schema({
 
-    user_id:[{ type: mongoose.Schema.Types.ObjectId, ref: 'users' }],
     name:{
         type:String,
         default:null
@@ -15,10 +14,14 @@ const PrizePoolSchema=new mongoose.Schema({
         type:String,
         default:null,
     },
-    pool_total:{
+    pool_prize:{
            type:String,
            default:null
     },
+    total_teams:{
+        type:String,
+        default:null
+      },
     created_at:{
         type:String,
         default:new Date()

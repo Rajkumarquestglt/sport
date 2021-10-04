@@ -15,6 +15,14 @@ const WalletNFTSchema=mongoose.Schema({
         type:String,
         default:null,
     },
+    nft_token:{
+        type:String,
+        default:null,
+    },
+    tokenURL:{
+      type:String,
+      default:null
+    },
     created_at:{
         type:String,
         default:new Date()
@@ -25,6 +33,6 @@ const WalletNFTSchema=mongoose.Schema({
     }
 })
 
-var WalletNF=mongoose.model('wallet_nft',WalletNFTSchema);
+var WalletNFT=mongoose.model('wallet_nft',WalletNFTSchema);
 
-module.exports={WalletNF:WalletNF};
+module.exports={WalletNFT:WalletNFT};

@@ -11,7 +11,7 @@
                         <button  onclick="checkBalance()" class="btn btn-primary"value="check now">Check Now</button>
                    </div>
                      <div class="form-group"style="height:400px;">
-                          <p style="height:400px;overflow-y: auto">Tokens:<span id="wallet-balance"></span></p>
+                          <p style="height:400px;overflow-y: auto">Balance:<span id="wallet-balance"></span></p>
                      </div>
                     </div>
              </div>
@@ -42,17 +42,20 @@
                url:"/users/wallet",
               data:{wallet:address},
                success:function(res){ 
-                   if(res.length>0){ let data="";
+                   if(res){  $("#wallet-balance").html(res);
+                       
+                    /*let data="";
                       res.forEach((token,idex)=>{ console.log(token)
                             data+="<br>"+token;
                           $("#wallet-balance").html(data);
                         
                         //$("#wallet-balance").html("<br/>");
 
-                      })
+                      })*/
+                      
                    }else
-                    {
-                        $("#wallet-balance").html("Not Found");
+                    { 
+                        $("#wallet-balance").html(res);
 
                     }
                }});

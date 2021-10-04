@@ -8,6 +8,8 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(API_URL);
 
 const abi = require("../artifacts/contracts/MyNFT.json");
+const { PrizePoolInfo } = require('../models/PrizePool');
+const { TeamPrizePoolInfo } = require('../models/TeamPrizePool');
 const contractAddress = "0xF3188651E5AEbe3364314209D77C0D29BcDEFaA1";
 const nftContract = new web3.eth.Contract(abi, contractAddress);
 
@@ -26,11 +28,11 @@ const saveTeam=async(teamObj)=>{
 
 }
 
-const allTeams=async(user_id)=>{
+const allTeams=async()=>{
 
     try{
-        let team=TeamInfo.find({'user_id':user_id});
-
+        let team=TeamInfo.find({});
+         return team;
       }catch(err){
           console.log(err);
       }
@@ -102,10 +104,39 @@ const buyTeam=async(address,user_id)=>
       
 
 }
+const countTeams=async()=>{
+  try{
 
+      return await TeamInfo.find({}).count();
+
+  }catch(err){
+    console.log(err)
+  }
+}
+
+const teamPrizePool=async(teamOBJ)=>{
+
+   try{
+       let team= new TeamPrizePoolInfo(teamOBJ);
+       await team.save();
+       return team;
+     }catch(e){
+       console.log(e);
+     }
+       
+}
+const checkTeamPool=async(id)=>{
+    try{
+      return await TeamPrizePoolInfo.findOne({team_id:id});
+    }catch(err){
+      console.log(err);
+    }
+}
 module.exports={
     saveTeam,
     findTeam,
     allTeams,
-    buyTeam
+    buyTeam,
+    checkTeamPool,
+    teamPrizePool
 }

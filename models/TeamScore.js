@@ -11,18 +11,21 @@ const TeamPrizePoolSchema=new mongoose.Schema({
     team_id:[{ type: mongoose.Schema.Types.ObjectId, ref: 'teams' }],
     
     prize_pool_id:[{ type: mongoose.Schema.Types.ObjectId, ref: 'prize_pools' }],
-    
+    score:{
+        type:String,
+        default:new Date()
+    },
     created_at:{
         type:String,
         default:new Date()
     },
     updated_at:{
         type:String,
-        default:null
+        default:null 
     }
 })
 
-var TeamPrizePoolInfo =  mongoose.model('team_prize_pools',TeamPrizePoolSchema);
+var TeamScoreInfo =  mongoose.model('team_scores',TeamScoreSchema);
 
-module.exports = {TeamPrizePoolInfo:TeamPrizePoolInfo};
+module.exports = {TeamScoreInfo:TeamScoreInfo};
 
