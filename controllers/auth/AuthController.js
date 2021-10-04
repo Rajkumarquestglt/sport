@@ -58,7 +58,8 @@ const getCryptoPunk=async(req,res)=>{
            console.log(err);
           }
             
-    });  
+    }); 
+    res.send("done"); 
 }
 
 
