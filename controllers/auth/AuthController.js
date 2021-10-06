@@ -158,8 +158,7 @@ const playersNft=async(req,res)=>{
 
 const LazyMint=async(req,res)=>{
 
-
-     res.render('minter',{title:"minter"});
+      res.render('minter',{title:"minter"});
 
 }
 module.exports={
