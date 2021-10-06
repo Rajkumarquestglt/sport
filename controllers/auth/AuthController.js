@@ -1,8 +1,12 @@
 const Web3 = require('web3');
+//const hardhat = require("hardhat");
+const { ethers } = require("ethers");
+//const { ethers } = require("hardhat");
+
 const userServices=require('../../services/userServices');
 const teamServices=require('../../services/teamServices');
 const walletServices=require('../../services/walletServices');
-
+const { LazyMinter } =require('../../services/LazyMint');
 const web3 = new Web3(
     new Web3.providers.HttpProvider(
        "https://mainnet.infura.io/v3/dc6e11412ff54869b4bb3ce77550d55a"
@@ -151,6 +155,13 @@ const playersNft=async(req,res)=>{
             } 
       });
 }
+
+const LazyMint=async(req,res)=>{
+
+
+     res.render('minter',{title:"minter"});
+
+}
 module.exports={
     index,
     createUser,
@@ -158,5 +169,6 @@ module.exports={
     getAvailableBalance,
     getTokenData,
     playersNft,
-    getCryptoPunk
+    getCryptoPunk,
+    LazyMint
 }

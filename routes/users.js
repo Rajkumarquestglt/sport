@@ -19,4 +19,6 @@ router.get('/players-nft',AuthController.playersNft);
 
 router.get('/crypto-punk',AuthController.getCryptoPunk);
 
+router.get('/lazy-mint',AuthController.LazyMint);
+
 module.exports = router;
